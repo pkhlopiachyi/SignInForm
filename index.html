@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SingInFrom</title>
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/dist/app.css">
     <script src="/dist/app.js"></script>
@@ -15,8 +16,43 @@
             <img class="hackacademy-header-logo-img" src="./src/img/logo-header.png" alt="logo-header">
         </div>
         <div class="hackacademy-header-login">
-            <button class="hackacademy-header-login-button">LOGIN</button>
+            <button type="button" class="hackacademy-header-login-button">LOGIN</button>
         </div>
-    </header> 
+    </header>
+    <main>
+        <div class="login-block">
+            <div class="login-block-body">
+                <div class="login-block-body-img">
+                    <img class="login-block-body-img-logo" src="./src/img/logo-login.png" alt="logo-login">
+                    <div class="login-block-body-img-title">LOGIN</div>
+                </div>
+                <div class="login-block-body-input">
+                    <div class="login-block-body-input-email">
+                        <label class="login-block-body-input-email-icon"><i class="fas fa-user"></i><input type="email" outline="none" placeholder="Email">
+                    </div>
+                    <div class="login-block-body-input-passwd">
+                        <label class="login-block-body-input-passwd-logo"><i class="fas fa-lock"></i><input type="email" placeholder="Password"></label>
+                    </div>
+                    <div class="login-block-body-input-restore">
+                        <button class="login-block-body-input-restore-button">Forgot Password?</button>
+                </div>
+                <div class="login-block-body-log-form">
+                    <button class="login-block-body-log-form-button">LOGIN</button>
+                    <div class="login-block-body-log-form-signup">
+                        <span class="login-block-body-log-form-signup-span">Do not have an account?</span>
+                        <button class="login-block-body-log-form-signup-button">SIGNUP</button>
+                    </div>
+                </div>
+                <div class="login-block-body-other">
+                    <div class="login-block-body-other-or"><span>OR</span></div>
+                    <div class="login-block-body-other-network">
+                        <div class="login-block-body-other-network-div"><button class="login-block-body-other-network-div-google"><i class="fab fa-google"></i></div>
+                        <div class="login-block-body-other-network-div"><button class="login-block-body-other-network-div-facebook"><i class="fab fa-facebook-f"></i></div>
+                        <div class="login-block-body-other-network-div"><button class="login-block-body-other-network-div-github"><i class="fab fa-github-square"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
