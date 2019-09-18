@@ -8,7 +8,6 @@
     <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/dist/app.css">
-    <script src="/dist/app.js"></script>
 </head>
 <body>
     <header class="hackacademy-header">
@@ -16,19 +15,24 @@
             <img class="hackacademy-header-logo-img" src="./src/img/logo-header.png" alt="logo-header">
         </div>
         <div class="hackacademy-header-login">
-            <button type="button" class="hackacademy-header-login-button">LOGIN</button>
+            <button type="button" id="login" class="hackacademy-header-login-button">LOGIN</button>
         </div>
     </header>
     <main>
-        <div class="login-block">
+        <div class="login-block" id="login-block">
             <div class="login-block-body">
+                <div class="login-block-body-close">
+                    <button class="login-block-body-close-button" id="close">
+                            <i class="fas fa-times"></i>
+                    </button>
+                </div>
                 <div class="login-block-body-img">
                     <img class="login-block-body-img-logo" src="./src/img/logo-login.png" alt="logo-login">
                     <div class="login-block-body-img-title">LOGIN</div>
                 </div>
                 <div class="login-block-body-input">
-                    <div class="login-block-body-input-email">
-                        <label class="login-block-body-input-email-icon"><i class="fas fa-user"></i><input type="email" outline="none" placeholder="Email">
+                    <div class="login-block-body-input-email" id="email-border">
+                        <label class="login-block-body-input-email-icon"><i class="fas fa-user"></i><input type="email" id="email" outline="none" placeholder="Email">
                     </div>
                     <div class="login-block-body-input-passwd">
                         <label class="login-block-body-input-passwd-logo"><i class="fas fa-lock"></i><input type="email" placeholder="Password"></label>
@@ -54,5 +58,7 @@
             </div>
         </div>
     </main>
+    
+    <script src="/dist/app.js"></script>
 </body>
 </html>
