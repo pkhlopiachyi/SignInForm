@@ -1,11 +1,9 @@
-body {
-    min-width: 350px;
-}
+@import 'variable.scss';
 
 .hackacademy-header{
     height: 64px;
     width: 100%;
-    background-color: #2A363B;
+    background-color: $back-color-header;
     
     &-logo {
         float: left;
