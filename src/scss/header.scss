@@ -1,0 +1,36 @@
+body {
+    min-width: 350px;
+}
+
+.hackacademy-header{
+    height: 64px;
+    width: 100%;
+    background-color: #2A363B;
+    
+    &-logo {
+        float: left;
+        margin-top: 10px;
+        width: 16%;
+        
+        &-img{
+            width: 310px;
+            height: 48px;
+        }
+    }
+    
+    &-login {
+        float: right;
+        margin-top: 20px;
+        margin-right: 10%;
+        
+        &-button {
+            border: none;
+            color: #ffffff;
+            background-color: inherit;
+            font: {
+                size: 18px;
+                family: 'Noto Sans', sans-serif;
+            }
+        }
+    }
+}
