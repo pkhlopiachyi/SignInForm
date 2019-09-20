@@ -26,12 +26,18 @@
         margin-right: 10%;
         
         &-button {
+            outline: none;
             border: none;
             color: #ffffff;
             background-color: inherit;
             font: {
                 size: 18px;
                 family: $font-family;
+            }
+
+            &:hover {
+                cursor: pointer;
+                color: $font-color;
             }
         }
     }

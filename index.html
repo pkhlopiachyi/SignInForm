@@ -20,7 +20,23 @@
     </header>
     <main>
         <div class="login-block" id="login-block">
-            <div class="login-block-body">
+            <div class="login-block-signup" id="signup-block">
+                <div class="login-block-signup-close">
+                    <button class="login-block-signup-close-button" id="close-signup-btn">
+                            <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <span>SignUp</span>
+            </div>
+            <div class="login-block-forgot" id="forgot-block">
+                <div class="login-block-forgot-close">
+                    <button class="login-block-forgot-close-button" id="close-forgot-btn">
+                            <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <span>Restore password</span>
+            </div>
+            <div class="login-block-body" id="body-block">
                 <div class="login-block-body-close">
                     <button class="login-block-body-close-button" id="close">
                             <i class="fas fa-times"></i>
@@ -30,35 +46,63 @@
                     <img class="login-block-body-img-logo" src="./src/img/logo-login.png" alt="logo-login">
                     <div class="login-block-body-img-title">LOGIN</div>
                 </div>
-                <div class="login-block-body-input">
-                    <div class="login-block-body-input-email" id="email-border">
-                        <label class="login-block-body-input-email-icon"><i class="fas fa-user"></i><input type="email" id="email" outline="none" placeholder="Email">
+                <form>
+                    <div class="login-block-body-input">
+                        <div class="login-block-body-input-email" id="email-border">
+                            <label class="login-block-body-input-email-logo">
+                                <i class="fas fa-user"></i>
+                                <input type="email" id="email" placeholder="Email">
+                            </label>
+                        </div>
+                        <div class="login-block-body-input-passwd" id="passwd-border">
+                            <label class="login-block-body-input-passwd-logo">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="passwd" placeholder="Password">
+                            </label>
+                        </div>
+                        <div class="login-block-body-input-passwd-logo-error" id="error-block">
+                            <div class="login-block-body-input-passwd-logo-error-icon">
+                                <i class="fas fa-exclamation"></i>
+                            </div>
+                            <span id="err-message">Wrong password</span>
+                        </div>
+                        <div class="login-block-body-input-restore">
+                            <button type="button" class="login-block-body-input-restore-button" id="forgot-btn">Forgot Password?</button>
+                        </div>
                     </div>
-                    <div class="login-block-body-input-passwd">
-                        <label class="login-block-body-input-passwd-logo"><i class="fas fa-lock"></i><input type="email" placeholder="Password"></label>
+                    <div class="login-block-body-log-form">
+                        <button type="submit" id="login-send" class="login-block-body-log-form-button" disabled>LOGIN</button>
+                        <div class="login-block-body-log-form-signup">
+                            <span class="login-block-body-log-form-signup-span">Do not have an account?</span>
+                            <button type="button" class="login-block-body-log-form-signup-button" id="signup-btn">SIGNUP</button>
+                        </div>
                     </div>
-                    <div class="login-block-body-input-restore">
-                        <button class="login-block-body-input-restore-button">Forgot Password?</button>
-                </div>
-                <div class="login-block-body-log-form">
-                    <button class="login-block-body-log-form-button">LOGIN</button>
-                    <div class="login-block-body-log-form-signup">
-                        <span class="login-block-body-log-form-signup-span">Do not have an account?</span>
-                        <button class="login-block-body-log-form-signup-button">SIGNUP</button>
-                    </div>
-                </div>
+                </form>
                 <div class="login-block-body-other">
-                    <div class="login-block-body-other-or"><span>OR</span></div>
+                    <div class="login-block-body-other-or">
+                        <span>OR</span>
+                    </div>
                     <div class="login-block-body-other-network">
-                        <div class="login-block-body-other-network-div"><button class="login-block-body-other-network-div-google"><i class="fab fa-google"></i></div>
-                        <div class="login-block-body-other-network-div"><button class="login-block-body-other-network-div-facebook"><i class="fab fa-facebook-f"></i></div>
-                        <div class="login-block-body-other-network-div"><button class="login-block-body-other-network-div-github"><i class="fab fa-github-square"></i></div>
+                        <div class="login-block-body-other-network-div">
+                            <button class="login-block-body-other-network-div-google">
+                                <i class="fab fa-google"></i>
+                            </button>
+                        </div>
+                        <div class="login-block-body-other-network-div">
+                            <button class="login-block-body-other-network-div-facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </button>
+                        </div>
+                        <div class="login-block-body-other-network-div">
+                            <button class="login-block-body-other-network-div-github">
+                                <i class="fab fa-github-square"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-    
     <script src="/dist/app.js"></script>
 </body>
 </html>
