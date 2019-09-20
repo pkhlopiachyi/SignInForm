@@ -5,9 +5,11 @@ const cssnano = require('cssnano')
 
 module.exports = {
 
-    entry: {
-        app: './src/index.js'
-    },
+    entry: [
+            './src/js/focus.js',
+            './src/js/module_window.js',
+            './src/scss/main.scss'
+    ],
 
     output: {
         path: __dirname,
