@@ -1,0 +1,134 @@
+@import 'variable.scss';
+
+
+.forgot-block {
+    display: none;
+    width: 470px;
+    background-color: $back-color;
+    margin: 0 auto;
+    margin-top: 100px;
+    text-align: center;
+    border-radius: 5px;
+    
+    &-close {
+        width: 50px;
+        float: right;
+        margin-right: 10px;
+        &-button {
+            margin-top: 10px;
+            outline: none;
+            border: none;
+            background-color: $back-color;
+            color: $text;
+            font-size: 20px;
+
+            &:hover {
+                cursor: pointer;
+                color: $font-color;
+            }
+        }
+    }
+
+    &-header {
+
+        &-img {
+            margin-left: 65px;
+            padding: 10px;
+        }
+        
+        &-name {
+            
+            &-text {
+
+                color: $font-color;
+                font: {
+                    size: 32px;
+                    family: $font-family;
+                    weight: bold;
+                }
+            }
+        }
+    }
+
+    &-body {
+        margin-top: 40px;
+        
+        &-input {
+            width: 330px;
+            margin: 0 auto;
+            text-align: left;
+            margin: 10px;
+            border: $border-signup;
+            margin: 0 auto;
+            padding: 5px;
+            border-radius: 5px; 
+            color: $text;
+
+            &-icon {
+                i {
+                    padding: 5px;
+                    padding-right: 7px;
+                    margin-right: 10px;
+                    border-right: $border-signup;
+                }
+
+                input{
+                    width: 260px;
+                    outline: none;
+                    border: none;
+                    color: $text;
+                    background-color: $back-color;
+                    -webkit-box-shadow: inset 0 0 0 50px $back-color;
+                    -webkit-text-fill-color: rgba(238, 238, 238, 0.7);
+                }        
+            }
+
+            &-button {
+                margin-top: 25px; 
+                border: none;
+                padding: 10px;
+                width: 340px;
+                border-radius: 5px;
+                outline: none;
+                background-color: rgba(232, 74, 95, 0.5);
+                color: $text;
+
+                font: {
+                    family: $font-family;
+                    size: 14px;
+                }
+
+                &:hover {
+                    cursor: not-allowed;
+                }
+            }
+        }
+        &-back{
+            margin-top: 25px;
+            padding: 15px;
+            color: $text;
+            font: {
+                family: $font-family;
+                size: 14px;
+            }
+
+            &-button {
+                outline: none;
+                border: none;
+                background-color: $back-color;
+                color: $font-color;
+                margin-left: -4px;
+                font: {
+                    family: $font-family;
+                    size: 14px;
+                    weight: bold;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    color: $text;
+                }
+            }
+        }
+    }
+}

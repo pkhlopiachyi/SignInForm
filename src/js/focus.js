@@ -1,47 +1,64 @@
+window.onload = function() {
 let email = document.getElementById('email');
 let passwd = document.getElementById('passwd');
+let forgotEmail = document.getElementById('forgot-email');
 
 let errMes = document.getElementById('err-message');
 let errBlock = document.getElementById('error-block');
 
 let loginSendButton = document.getElementById('login-send');
+let forgotSendButton = document.getElementById('forgot-send-btn');
 
 let validEmail = false;
 let validPasswd = false;
 
 email.onfocus = () => {
     document.getElementById('email-border').style.border = "1px solid #E84A5F";
-
 }
-
 
 email.onblur = () => {
     document.getElementById('email-border').style.border = "1px solid rgba(238, 238, 238, 0.2)";
 }
 
-
 passwd.onfocus = () => {
     document.getElementById('passwd-border').style.border = "1px solid #E84A5F";
 }
-
 
 passwd.onblur = () => {
     document.getElementById('passwd-border').style.border = "1px solid rgba(238, 238, 238, 0.2)";
 }
 
 email.onkeyup = () => {
-    validEmail = testEmail();
+
+    validEmail = testEmail(email);
     enableLoginButton(validPasswd, validEmail);
 }
 
-function testEmail() {
+forgotEmail.onfocus = () => {
+    document.getElementById('forgot-email-border').style.border = "1px solid #E81A5F"
+}
+forgotEmail.onblur = () => {
+        document.getElementById('forgot-email-border').style.border = "1px solid rgba(238, 238, 238, 0.2)";
+}
+
+
+forgotEmail.onkeyup = () => {
+    let res = testEmail(forgotEmail);
+    console.log(res);
+    if (res) {
+        forgotSendButton.disabled = false;
+        forgotSendButton.style.background = "#E84A5F";
+        forgotSendButton.style.cursor = "pointer";
+    }
+}
+
+function testEmail(email) {
     let str = email.value;
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (str.match(re)) {
         return true;
     } else {
         return false;
-
     }
 }
 
@@ -118,10 +135,14 @@ function fadeIn(el){
   })();
 }
 
-function enableLoginButton(valPasswd, valEmail) {
+function
+enableLoginButton(valPasswd, valEmail) {
+
     if(valEmail && valPasswd) {
         loginSendButton.disabled = false;
         loginSendButton.style.backgroundColor = "#E84A5F";
         loginSendButton.style.cursor = "pointer";
     }
+}
+
 }

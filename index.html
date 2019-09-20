@@ -7,7 +7,7 @@
     <title>SingInFrom</title>
     <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/dist/app.css">
+    <script src="bundle.js"></script>
 </head>
 <body>
     <header class="hackacademy-header">
@@ -15,27 +15,13 @@
             <img class="hackacademy-header-logo-img" src="./src/img/logo-header.png" alt="logo-header">
         </div>
         <div class="hackacademy-header-login">
-            <button type="button" id="login" class="hackacademy-header-login-button">LOGIN</button>
+            <button onclick="showBackDrop()" class="hackacademy-header-login-button">
+                LOGIN
+            </button>
         </div>
     </header>
     <main>
         <div class="login-block" id="login-block">
-            <div class="login-block-signup" id="signup-block">
-                <div class="login-block-signup-close">
-                    <button class="login-block-signup-close-button" id="close-signup-btn">
-                            <i class="fas fa-times"></i>
-                    </button>
-                </div>
-                <span>SignUp</span>
-            </div>
-            <div class="login-block-forgot" id="forgot-block">
-                <div class="login-block-forgot-close">
-                    <button class="login-block-forgot-close-button" id="close-forgot-btn">
-                            <i class="fas fa-times"></i>
-                    </button>
-                </div>
-                <span>Restore password</span>
-            </div>
             <div class="login-block-body" id="body-block">
                 <div class="login-block-body-close">
                     <button class="login-block-body-close-button" id="close">
@@ -71,7 +57,7 @@
                         </div>
                     </div>
                     <div class="login-block-body-log-form">
-                        <button type="submit" id="login-send" class="login-block-body-log-form-button" disabled>LOGIN</button>
+                        <button type="submit" id="login-send" class="login-block-body-log-form-button" disabled>Login</button>
                         <div class="login-block-body-log-form-signup">
                             <span class="login-block-body-log-form-signup-span">Do not have an account?</span>
                             <button type="button" class="login-block-body-log-form-signup-button" id="signup-btn">SIGNUP</button>
@@ -101,8 +87,43 @@
                     </div>
                 </div>
             </div>
+            <div class="login-block-signup" id="signup-block">
+                <div class="login-block-signup-close">
+                    <button class="login-block-signup-close-button" id="close-signup-btn">
+                            <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <span>SignUp</span>
+            </div>
+            <div class="forgot-block" id="forgot-block">
+                <div class="forgot-block-close">
+                    <button class="forgot-block-close-button" id="close-forgot-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="forgot-block-header">
+                    <img class="forgot-block-header-img" src="./src/img/logo-login.png" alt="logo-header">
+                    <div class="forgot-block-header-name">
+                        <span class="forgot-block-header-name-text">FORGOT PASSWORD</span>
+                    </div>
+                </div>
+                <div class="forgot-block-body">
+                    <form>
+                        <div class="forgot-block-body-input" id="forgot-email-border">
+                            <label class="forgot-block-body-input-icon">
+                                <i class="fas fa-user"></i>
+                                <input type="email" id="forgot-email" placeholder="Email">
+                            </label>
+                        </div>
+                        <button class=forgot-block-body-input-button type="submit" id="forgot-send-btn" disabled>Reset Password</button>
+                    </form>
+                    <div class="forgot-block-body-back">
+                        <span>Back to</span>
+                        <button class="forgot-block-body-back-button" type="button" id="back-to-login">LOGIN</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
-    <script src="/dist/app.js"></script>
 </body>
 </html>
