@@ -1,307 +1,262 @@
 @import 'variable.scss';
 
-.login-block {
+.login-block-body {
     display: none;
-    position: absolute;
-    top: 64px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    
-    &-signup {
-        display: none;
-        width: 470px;
-        height: 300px;
-        background-color: $back-color;
-        margin: 0 auto;
-        margin-top: 100px;
-        text-align: center;
-        border-radius: 5px;
-        color: $font-color;
-        font: {
-            size: 30px;
-            family: $font-family;
-        }
-        
-        &-close {
-            float: right;
-            margin-right: 30px;
-            &-button {
-                margin-top: 30px;
-                outline: none;
-                border: none;
-                background-color: $back-color;
-                color: $text;
-                font-size: 20px;
+    background-color: $back-color;
+    width: 470px;
+    margin: 0 auto;
+    margin-top: 100px;
+    text-align: center;
+    border-radius: 5px;
+    color: $text;
 
-                &:hover {
-                    cursor: pointer;
-                    color: $font-color;
-                }
-            }    
+    &-close {
+        width: 50px;
+        float: right;
+        margin-right: 10px;
+        &-button {
+            margin-top: 10px;
+            outline: none;
+            border: none;
+            background-color: $back-color;
+            color: $text;
+            font-size: 20px;
+            
+            i {
+                font-weight: 600;
+            }
+
+            &:hover {
+                cursor: pointer;
+                color: $font-color;
+            }
         }
     }
 
-    &-body {
-        display: block;
-        background-color: $back-color;
-        width: 470px;
+    &-img {
+        
+        &-logo {  
+            margin-left: 65px;
+            padding: 10px;
+            width: 150px;              
+        }
+        
+        &-title {
+            color: $font-color;
+            font: {
+                family: $font-family;
+                size: 32px;
+                weight: bold;
+            }
+        }
+    }
+    
+    &-input {
+        width: 330px; 
         margin: 0 auto;
-        margin-top: 100px;
-        text-align: center;
-        border-radius: 5px;
-        color: $text;
+        margin-top: 30px;
+        
+        &-email,
+        &-passwd {
+            text-align: left;
+            margin: 10px;
+            border: $border-signup;
+            margin: 0 auto;
+            padding: 5px;
+            border-radius: 5px;
 
-        &-close {
-            width: 50px;
-            float: right;
-            margin-right: 10px;
-            &-button {
-                margin-top: 10px;
+            label > i {
+                padding: 5px;
+                padding-right: 7px;
+                margin-right: 10px;
+                border-right: $border-signup;
+            }
+            
+            label> input{    
+                width: 260px;
                 outline: none;
                 border: none;
-                background-color: $back-color;
                 color: $text;
-                font-size: 20px;
-                
-                i {
-                    font-weight: 600;
+                background-color: $back-color;
+                -webkit-box-shadow: inset 0 0 0 50px $back-color;
+                -webkit-text-fill-color: rgba(238, 238, 238, 0.7);
+            }
+        }
+        
+        &-passwd{
+            margin-top: 20px;
+            
+            &-logo {
+                &-error {
+                    margin-top: 5px;
+                    border-radius: 10px;
+                    background-color: #ffffff;
+                    color: #000000;
+                    height: 50px;
+                    width: 380px;
+                    display: none;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    position: absolute;
+                    
+                    &-icon {
+                        color: #ffffff;
+                        background-color: #FFA300;
+                        padding: 5px 10px;
+                        border-radius: 3px;
+                        margin: 5px;
+                    }        
+                    
+                    &::after {
+                        content: '';
+                        width: 0;
+                        height: 0;
+                        border-left: 20px solid transparent;
+                        border-right: 20px solid transparent;
+                        border-bottom: 20px solid #fff;
+                        margin-left: 30px;
+                        margin-top: -30px;
+                        position: absolute;
+                        
+                    }
                 }
+            }
+        }
 
+        &-restore{
+            text-align: right;
+            
+            &-button {
+                outline: none;
+                border: none;
+                background: $back-color;
+                color: $text;
+                font: {
+                    size: 12px;
+                    family: $font-family;
+                }
                 &:hover {
                     cursor: pointer;
                     color: $font-color;
                 }
-            }
+            }                
         }
+    }
 
-        &-img {
-            
-            &-logo {  
-                margin-left: 65px;
-                padding: 10px;
-                width: 150px;              
-            }
-            
-            &-title {
-                color: $font-color;
-                font: {
-                    family: $font-family;
-                    size: 32px;
-                    weight: bold;
-                }
-            }
-        }
+    &-log-form{
+        width: 330px;
+        margin: 0 auto; 
+        margin-top: 90px;
         
-        &-input {
-            width: 330px; 
-            margin: 0 auto;
-            margin-top: 30px;
+        &-button {
+            outline: none;
+            width: inherit;
+            background-color: rgba(232, 74, 95, 0.5);
+            border: none;
+            line-height: 25px;
+            color: $text;
+            border-radius: 5px;
+            padding: 10px;
             
-            &-email,
-            &-passwd {
-                text-align: left;
-                margin: 10px;
-                border: $border-signup;
-                margin: 0 auto;
-                padding: 5px;
-                border-radius: 5px;
-
-                label > i {
-                    padding: 5px;
-                    padding-right: 7px;
-                    margin-right: 10px;
-                    border-right: $border-signup;
-                }
-                
-                label> input{    
-                    width: 260px;
-                    outline: none;
-                    border: none;
-                    color: $text;
-                    background-color: $back-color;
-                    -webkit-box-shadow: inset 0 0 0 50px $back-color;
-                    -webkit-text-fill-color: rgba(238, 238, 238, 0.7);
-                }
-            }
-            
-            &-passwd{
-                margin-top: 20px;
-                
-                &-logo {
-                    &-error {
-                        margin-top: 5px;
-                        border-radius: 10px;
-                        background-color: #ffffff;
-                        color: #000000;
-                        height: 50px;
-                        width: 380px;
-                        display: none;
-                        flex-direction: row;
-                        justify-content: flex-start;
-                        align-items: center;
-                        position: absolute;
-                        
-                        &-icon {
-                            color: #ffffff;
-                            background-color: #FFA300;
-                            padding: 5px 10px;
-                            border-radius: 3px;
-                            margin: 5px;
-                        }        
-                        
-                        &::after {
-                            content: '';
-                            width: 0;
-                            height: 0;
-                            border-left: 20px solid transparent;
-                            border-right: 20px solid transparent;
-                            border-bottom: 20px solid #fff;
-                            margin-left: 30px;
-                            margin-top: -30px;
-                            position: absolute;
-                            
-                        }
-                    }
-                }
-            }
-
-            &-restore{
-                text-align: right;
-                
-                &-button {
-                    outline: none;
-                    border: none;
-                    background: $back-color;
-                    color: $text;
-                    font: {
-                        size: 12px;
-                        family: $font-family;
-                    }
-                    &:hover {
-                        cursor: pointer;
-                        color: $font-color;
-                    }
-                }                
+            &:hover {
+                cursor: not-allowed;
             }
         }
 
-        &-log-form{
-            width: 330px;
-            margin: 0 auto; 
-            margin-top: 90px;
+        &-signup {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            &-span {
+                font: {
+                    size: 14px;
+                    family: $font-family;   
+                }
+            }
             
             &-button {
                 outline: none;
-                width: inherit;
-                background-color: rgba(232, 74, 95, 0.5);
                 border: none;
-                line-height: 25px;
-                color: $text;
-                border-radius: 5px;
-                padding: 10px;
-                
+                background-color: $back-color;
+                color: $font-color;
+                font: {
+                    family: $font-family;
+                    size: 14px;
+                    weight: bold;
+                }
                 &:hover {
-                    cursor: not-allowed;
+                    cursor: pointer;
+                    color: $text;
                 }
             }
+        } 
+    }
+    
+    &-other {
+        width: 330px;
+        margin: 0 auto; 
+        margin-top: 20px;
+        
+        &-or {
+            position: relative;
+            z-index: 1;
 
-            &-signup {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
+            &:before {
+                border-top: 1px solid $text;
+                content: "";
+                margin: 0 auto;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 95%;
+                z-index: -1;
+            }
 
-                &-span {
-                    font: {
-                        size: 14px;
-                        family: $font-family;   
-                    }
-                }
+            span {
+                background: $back-color;
+                padding: 0 15px;
+            }
+        }
+
+        &-network {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 200px;
+            margin: 0 auto;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            padding: 20px;
+
+            &-div {
                 
-                &-button {
+                &-google,
+                &-facebook,
+                &-github {
                     outline: none;
+                    color: $text;
                     border: none;
                     background-color: $back-color;
-                    color: $font-color;
-                    font: {
-                        family: $font-family;
-                        size: 14px;
-                        weight: bold;
+                    
+                    i {
+                        width: 30px;
+                        height: 30px;
+                        font-size: 25px;
                     }
+
                     &:hover {
                         cursor: pointer;
-                        color: $text;
                     }
                 }
-            } 
-        }
-        
-        &-other {
-            width: 330px;
-            margin: 0 auto; 
-            margin-top: 20px;
-            
-            &-or {
-                position: relative;
-                z-index: 1;
 
-                &:before {
-                    border-top: 1px solid $text;
-                    content: "";
-                    margin: 0 auto;
-                    position: absolute;
-                    top: 50%;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    width: 95%;
-                    z-index: -1;
-                }
-
-                span {
-                    background: $back-color;
-                    padding: 0 15px;
-                }
-            }
-
-            &-network {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                width: 200px;
-                margin: 0 auto;
-                margin-top: 15px;
-                margin-bottom: 15px;
-                padding: 20px;
-
-                &-div {
-                    
-                    &-google,
-                    &-facebook,
-                    &-github {
-                        outline: none;
-                        color: $text;
-                        border: none;
-                        background-color: $back-color;
-                        
-                        i {
-                            width: 30px;
-                            height: 30px;
-                            font-size: 25px;
-                        }
-
-                        &:hover {
-                            cursor: pointer;
-                        }
-                    }
-
-                    &-github i{
-                        font-size: 30px;
-                    } 
-                }
+                &-github i{
+                    font-size: 30px;
+                } 
             }
         }
     }
 }
-
