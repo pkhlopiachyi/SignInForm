@@ -4,13 +4,10 @@ const autoprefixer = require('autoprefixer')
 const cssnano = require('cssnano')
 
 module.exports = {
-
     entry: [
-            './src/js/focus.js',
-            './src/js/module_window.js',
-            './src/scss/main.scss'
+      './src/index.js',
+      './src/scss/main.scss',
     ],
-
     output: {
         path: __dirname,
         publicPath: '/',

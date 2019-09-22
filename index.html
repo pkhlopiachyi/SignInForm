@@ -15,17 +15,17 @@
             <img class="hackacademy-header-logo-img" src="./src/img/logo-header.png" alt="logo-header">
         </div>
         <div class="hackacademy-header-login">
-            <button onclick="showBackDrop()" class="hackacademy-header-login-button">
+            <button class="hackacademy-header-login-button" onclick="showBackDrop()">
                 LOGIN
             </button>
         </div>
     </header>
     <main>
-        <div class="login-block" id="login-block">
+        <div class="back-drop" id="back-drop">
             <div class="login-block-body" id="body-block">
                 <div class="login-block-body-close">
-                    <button class="login-block-body-close-button" id="close">
-                            <i class="fas fa-times"></i>
+                    <button class="login-block-body-close-button" onclick="closeBackDrop()">
+                        <i class="fas fa-times"></i>
                     </button>
                 </div>
                 <div class="login-block-body-img">
@@ -37,13 +37,13 @@
                         <div class="login-block-body-input-email" id="email-border">
                             <label class="login-block-body-input-email-logo">
                                 <i class="fas fa-user"></i>
-                                <input type="email" id="email" placeholder="Email">
+                                <input type="email" placeholder="Email" id='email' onfocus="onFocusInput('email-border')" onblur="onBlurInput('email-border')">
                             </label>
                         </div>
                         <div class="login-block-body-input-passwd" id="passwd-border">
                             <label class="login-block-body-input-passwd-logo">
                                 <i class="fas fa-lock"></i>
-                                <input type="password" id="passwd" placeholder="Password">
+                                <input type="password" id="passwd" placeholder="Password" onfocus="onFocusInput('passwd-border')" onblur="onBlurInput('passwd-border')">
                             </label>
                         </div>
                         <div class="login-block-body-input-passwd-logo-error" id="error-block">
@@ -53,14 +53,14 @@
                             <span id="err-message">Wrong password</span>
                         </div>
                         <div class="login-block-body-input-restore">
-                            <button type="button" class="login-block-body-input-restore-button" id="forgot-btn">Forgot Password?</button>
+                            <button type="button" class="login-block-body-input-restore-button" id="forgot-btn" onclick="changeBlock('forgot-block', 'body-block')">Forgot Password?</button>
                         </div>
                     </div>
                     <div class="login-block-body-log-form">
                         <button type="submit" id="login-send" class="login-block-body-log-form-button" disabled>Login</button>
                         <div class="login-block-body-log-form-signup">
                             <span class="login-block-body-log-form-signup-span">Do not have an account?</span>
-                            <button type="button" class="login-block-body-log-form-signup-button" id="signup-btn">SIGNUP</button>
+                            <button type="button" class="login-block-body-log-form-signup-button" id="signup-btn" onclick="changeBlock('signup-block', 'body-block')">SIGNUP</button>
                         </div>
                     </div>
                 </form>
@@ -87,22 +87,76 @@
                     </div>
                 </div>
             </div>
-            <div class="login-block-signup" id="signup-block">
-                <div class="login-block-signup-close">
-                    <button class="login-block-signup-close-button" id="close-signup-btn">
-                            <i class="fas fa-times"></i>
+            <div class="signup-block" id="signup-block">
+                <div class="signup-block-close">
+                    <button class="signup-block-close-button" onclick="closeBackDrop()">
+                        <i class="fas fa-times"></i>
                     </button>
+                    <div class="sugnup-block-header">
+                        <img class="signup-block-header-img" src="./src/img/logo-login.png" alt="logo">
+                        <div class="signup-block-header-name">
+                            <span class="signup-block-header-name-text">CREATE YOUR ACCOUNT</span>
+                        </div>
+                    </div>
+                    <div class="signup-block-body">
+                        <form>
+                            <div class="signup-block-body-input">
+                                <div class="signup-block-body-input-email" id="email-border">
+                                    <label class="signup-block-body-input-email-logo">
+                                        <i class="fas fa-user"></i>
+                                        <input type="email" placeholder="Email" id='email-signup'>
+                                    </label>
+                                </div>
+                                <div class="signup-block-body-input-passwd" id="passwd-border">
+                                    <label class="signup-block-body-input-passwd-logo">
+                                        <i class="fas fa-lock"></i>
+                                        <input type="password" id="passwd-signup" placeholder="Password">
+                                    </label>
+                                </div>
+                                <div class="signup-block-body-input-passwd-logo-error" id="error-block">
+                                    <div class="signup-block-body-input-passwd-logo-error-icon">
+                                        <i class="fas fa-exclamation"></i>
+                                    </div>
+                                    <span id="err-message">Wrong password</span>
+                                </div>
+                                <div class="signup-block-body-input-passwd-confirm" id="passwd-confirm-border">
+                                    <label class="signup-block-body-input-passwd-confirm-logo">
+                                        <i class="fas fa-lock"></i>
+                                        <input type="password" id="passwd-confirm" placeholder="Password">
+                                    </label>
+                                </div>
+                                <div class="signup-block-body-input-passwd-confirm-logo-error" id="error-confirm-block">
+                                    <div class="signup-block-body-input-passwd-confirm-logo-error-icon">
+                                        <i class="fas fa-exclamation"></i>
+                                    </div>
+                                    <span id="err-message-confirm">Wrong password</span>
+                                </div>
+                                <div class="signup-block-body-input-send">
+                                    <button type="submit" id="signup-send" class="signup-block-body-input-send-button" disabled>Create Account</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="signup-block-body-rules">
+                            <span>By creating an account, I accept Hackacademy</span>
+                            <button class="signup-block-body-rules-terms-of-use" id="term-of-use">Terms of use</button>
+                            <span>and</span>
+                            <button class="signup-block-body-rules-privacy-police" id="privacy-policy">Privacy Policy</button>
+                        </div>
+                        <div class="signup-block-body-back">
+                            <span>Already have an account?</span>
+                            <button class="signup-block-body-back-button" type="button" onclick="changeBlock('body-block', 'signup-block')">LOGIN</button>
+                        </div>
+                    </div>
                 </div>
-                <span>SignUp</span>
             </div>
             <div class="forgot-block" id="forgot-block">
                 <div class="forgot-block-close">
-                    <button class="forgot-block-close-button" id="close-forgot-btn">
+                    <button class="forgot-block-close-button" onclick="closeBackDrop()">
                         <i class="fas fa-times"></i>
                     </button>
                 </div>
                 <div class="forgot-block-header">
-                    <img class="forgot-block-header-img" src="./src/img/logo-login.png" alt="logo-header">
+                    <img class="forgot-block-header-img" src="./src/img/logo-login.png" alt="logo">
                     <div class="forgot-block-header-name">
                         <span class="forgot-block-header-name-text">FORGOT PASSWORD</span>
                     </div>
@@ -112,14 +166,14 @@
                         <div class="forgot-block-body-input" id="forgot-email-border">
                             <label class="forgot-block-body-input-icon">
                                 <i class="fas fa-user"></i>
-                                <input type="email" id="forgot-email" placeholder="Email">
+                                <input type="email" id="forgot-email" placeholder="Email" onfocus="onFocusInput('forgot-email-border')" onblur="onBlurInput('forgot-email-border')">
                             </label>
                         </div>
                         <button class=forgot-block-body-input-button type="submit" id="forgot-send-btn" disabled>Reset Password</button>
                     </form>
                     <div class="forgot-block-body-back">
                         <span>Back to</span>
-                        <button class="forgot-block-body-back-button" type="button" id="back-to-login">LOGIN</button>
+                        <button class="forgot-block-body-back-button" type="button" onclick="changeBlock('body-block', 'forgot-block')">LOGIN</button>
                     </div>
                 </div>
             </div>
