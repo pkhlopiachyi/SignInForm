@@ -1,6 +1,5 @@
 @import 'variable.scss';
 
-
 .forgot-block {
     display: none;
     width: 470px;
@@ -55,9 +54,7 @@
         
         &-input {
             width: 330px;
-            margin: 0 auto;
             text-align: left;
-            margin: 10px;
             border: $border-signup;
             margin: 0 auto;
             padding: 5px;

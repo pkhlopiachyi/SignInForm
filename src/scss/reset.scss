@@ -1,0 +1,60 @@
+@import 'variable.scss';
+
+.reset-block {
+    width: 470px;
+    background-color: $back-color;
+    margin: 0 auto;
+    margin-top: 100px;
+    text-align: center;
+    border-radius: 5px;
+    color: $text;
+
+    &-header {
+         
+        &-img {
+            margin-top: 10px;
+            
+        }
+        &-name {
+            margin-top: 20px;
+            color: $font-color;
+            font: {
+                size: 32px;
+                family: $font-family;
+                weight: bold;
+            }
+        }
+
+    }
+    &-body {
+        margin-top: 50px;
+        
+        &-input-passwd {
+            margin-top: 20px;
+            width: 330px;
+            text-align: left;
+            margin: 10px;
+            border: $border-signup;
+            margin: 0 auto;
+            padding: 5px;
+            border-radius: 5px;
+
+            label > i {
+                padding: 5px;
+                padding-right: 7px;
+                margin-right: 10px;
+                border-right: $border-signup;
+            }
+
+            label> input{
+                width: 260px;
+                outline: none;
+                border: none;
+                color: $text;
+                background-color: $back-color;
+                -webkit-box-shadow: inset 0 0 0 50px $back-color;
+                -webkit-text-fill-color: rgba(238, 238, 238, 0.7);
+            }
+        }
+    }
+}

@@ -1,7 +1,7 @@
 @import 'variable.scss';
 
 .login-block-body {
-    display: block;
+    display: none;
     background-color: $back-color;
     width: 470px;
     margin: 0 auto;
@@ -72,7 +72,7 @@
                 border-right: $border-signup;
             }
             
-            label> input{    
+            label > input {    
                 width: 260px;
                 outline: none;
                 border: none;
@@ -83,7 +83,7 @@
             }
         }
         
-        &-passwd{
+        &-passwd {
             margin-top: 20px;
             
             &-logo {
@@ -93,7 +93,7 @@
                     background-color: #ffffff;
                     color: #000000;
                     height: 50px;
-                    width: 380px;
+                    width: 330px;
                     display: none;
                     flex-direction: row;
                     justify-content: flex-start;
