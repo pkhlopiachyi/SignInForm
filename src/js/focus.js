@@ -33,6 +33,10 @@ window.onload = function() {
             forgotSendButton.disabled = false;
             forgotSendButton.style.background = "#E84A5F";
             forgotSendButton.style.cursor = "pointer";
+        } else {
+            forgotSendButton.disabled = true;
+            forgotSendButton.style.background = "rgba(232, 74, 95, 0.5)";
+            forgotSendButton.style.cursor = "not-allowed";
         }
     }
     
@@ -125,6 +129,10 @@ window.onload = function() {
             loginSendButton.disabled = false;
             loginSendButton.style.backgroundColor = "#E84A5F";
             loginSendButton.style.cursor = "pointer";
+        } else {
+            loginSendButton.disabled = true;
+            loginSendButton.style.backgroundColor = "rgba(232, 74, 95, 0.5)";
+            loginSendButton.style.cursor = "not-allowed";
         }
     }
     

@@ -14,7 +14,7 @@
         float: right;
         margin-right: 10px;
 
-        &button {
+        &-button {
             margin-top: 10px;
             outline: none;
             border: none;
@@ -91,14 +91,14 @@
 
                 &-logo {
                     &-error {
-                        display: flex;
+                        display: none;
                         margin-top: 5px;
                         border-radius: 10px;
                         background-color: #ffffff;
                         color: #000000;
                         height: 50px;
                         width: 330px;
-                        flex-dirextion: row;
+                        flex-direction: row;
                         justify-content: flex-start;
                         align-items: center;
                         position: absolute;
@@ -161,7 +161,15 @@
                 border: none;
                 background-color: $back-color;
                 color: $font-color;
-                font: inherit;
+                font: {
+                    font-family: $font-family;
+                    size: 14px;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    color: $text;
+                }
             }
         }
 

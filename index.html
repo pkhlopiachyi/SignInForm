@@ -92,60 +92,60 @@
                     <button class="signup-block-close-button" onclick="closeBackDrop()">
                         <i class="fas fa-times"></i>
                     </button>
-                    <div class="sugnup-block-header">
-                        <img class="signup-block-header-img" src="./src/img/logo-login.png" alt="logo">
-                        <div class="signup-block-header-name">
-                            <span class="signup-block-header-name-text">CREATE YOUR ACCOUNT</span>
-                        </div>
+                </div>
+                <div class="sugnup-block-header">
+                    <img class="signup-block-header-img" src="./src/img/logo-login.png" alt="logo">
+                    <div class="signup-block-header-name">
+                        <span class="signup-block-header-name-text">CREATE YOUR ACCOUNT</span>
                     </div>
-                    <div class="signup-block-body">
-                        <form>
-                            <div class="signup-block-body-input">
-                                <div class="signup-block-body-input-email" id="email-border">
-                                    <label class="signup-block-body-input-email-logo">
-                                        <i class="fas fa-user"></i>
-                                        <input type="email" placeholder="Email" id='email-signup'>
-                                    </label>
-                                </div>
-                                <div class="signup-block-body-input-passwd" id="passwd-border">
-                                    <label class="signup-block-body-input-passwd-logo">
-                                        <i class="fas fa-lock"></i>
-                                        <input type="password" id="passwd-signup" placeholder="Password">
-                                    </label>
-                                </div>
-                                <div class="signup-block-body-input-passwd-logo-error" id="error-block">
-                                    <div class="signup-block-body-input-passwd-logo-error-icon">
-                                        <i class="fas fa-exclamation"></i>
-                                    </div>
-                                    <span id="err-message">Wrong password</span>
-                                </div>
-                                <div class="signup-block-body-input-passwd-confirm" id="passwd-confirm-border">
-                                    <label class="signup-block-body-input-passwd-confirm-logo">
-                                        <i class="fas fa-lock"></i>
-                                        <input type="password" id="passwd-confirm" placeholder="Password">
-                                    </label>
-                                </div>
-                                <div class="signup-block-body-input-passwd-confirm-logo-error" id="error-confirm-block">
-                                    <div class="signup-block-body-input-passwd-confirm-logo-error-icon">
-                                        <i class="fas fa-exclamation"></i>
-                                    </div>
-                                    <span id="err-message-confirm">Wrong password</span>
-                                </div>
-                                <div class="signup-block-body-input-send">
-                                    <button type="submit" id="signup-send" class="signup-block-body-input-send-button" disabled>Create Account</button>
-                                </div>
+                </div>
+                <div class="signup-block-body">
+                    <form>
+                        <div class="signup-block-body-input">
+                            <div class="signup-block-body-input-email" id="email-border">
+                                <label class="signup-block-body-input-email-logo">
+                                    <i class="fas fa-user"></i>
+                                    <input type="email" placeholder="Email" id='email-signup'>
+                                </label>
                             </div>
-                        </form>
-                        <div class="signup-block-body-rules">
-                            <span>By creating an account, I accept Hackacademy</span>
-                            <button class="signup-block-body-rules-terms-of-use" id="term-of-use">Terms of use</button>
-                            <span>and</span>
-                            <button class="signup-block-body-rules-privacy-police" id="privacy-policy">Privacy Policy</button>
+                            <div class="signup-block-body-input-passwd" id="passwd-border">
+                                <label class="signup-block-body-input-passwd-logo">
+                                    <i class="fas fa-lock"></i>
+                                    <input type="password" id="passwd-signup" placeholder="Password">
+                                </label>
+                            </div>
+                            <div class="signup-block-body-input-passwd-logo-error" id="error-block">
+                                <div class="signup-block-body-input-passwd-logo-error-icon">
+                                    <i class="fas fa-exclamation"></i>
+                                </div>
+                                <span id="err-message">Wrong password</span>
+                            </div>
+                            <div class="signup-block-body-input-passwd-confirm" id="passwd-confirm-border">
+                                <label class="signup-block-body-input-passwd-confirm-logo">
+                                    <i class="fas fa-lock"></i>
+                                    <input type="password" id="passwd-confirm" placeholder="Password">
+                                </label>
+                            </div>
+                            <div class="signup-block-body-input-passwd-confirm-logo-error" id="error-confirm-block">
+                                <div class="signup-block-body-input-passwd-confirm-logo-error-icon">
+                                    <i class="fas fa-exclamation"></i>
+                                </div>
+                                <span id="err-message-confirm">Wrong password</span>
+                            </div>
+                            <div class="signup-block-body-input-send">
+                                <button type="submit" id="signup-send" class="signup-block-body-input-send-button" disabled>Create Account</button>
+                            </div>
                         </div>
-                        <div class="signup-block-body-back">
-                            <span>Already have an account?</span>
-                            <button class="signup-block-body-back-button" type="button" onclick="changeBlock('body-block', 'signup-block')">LOGIN</button>
-                        </div>
+                    </form>
+                    <div class="signup-block-body-rules">
+                        <span>By creating an account, I accept Hackacademy</span>
+                        <button class="signup-block-body-rules-button" id="term-of-use">Terms of use</button>
+                        <span>and</span>
+                        <button class="signup-block-body-rules-button" id="privacy-policy">Privacy Policy</button>
+                    </div>
+                    <div class="signup-block-body-back">
+                        <span>Already have an account?</span>
+                        <button class="signup-block-body-back-button" type="button" onclick="changeBlock('body-block', 'signup-block')">LOGIN</button>
                     </div>
                 </div>
             </div>
