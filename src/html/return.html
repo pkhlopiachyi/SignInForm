@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reset password</title>
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+    <script src="../../bundle.js"></script>
+</head>
+<body>
+    <header class="hackacademy-header">
+       <div class="hackacademy-header-logo">
+             <img class="hackacademy-header-logo-img" src="../img/logo-header.png" alt="logo-header">
+       </div>
+    </header>
+    <main>
+        <div class="reset-block">
+            <div class="reset-block-header">
+                <img class="reset-block-header-img" src="../img/logo-login.png" alt="logo">
+                <div class="reset-block-header-name">
+                    <span class="reset-block-header-name-text">RESET BLOCK</span>
+                </div>
+            </div>
+            <form>
+                <div class="reset-block-body-input">
+                    <div class="reset-block-body-input-passwd" id="passwd-reset-border">
+                        <label class="reset-block-body-input-passwd-logo">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="passwd-signup" placeholder="Password" onfocus="onFocusInput('passwd-reset-border')" onblur="onBlurInput('passwd-reset-border')">
+                        </label>
+                    </div>
+                    <div class="reset-block-body-input-passwd-logo-error" id="error-reset-block">
+                        <div class="reset-block-body-input-passwd-logo-error-icon">
+                            <i class="fas fa-exclamation"></i>
+                        </div>
+                        <span id="err-reset-message">Wrong password</span>
+                    </div>
+                    <div class="reset-block-body-input-passwd-confirm" id="passwd-reset-confirm-border">
+                        <label class="reset-block-body-input-passwd-confirm-logo">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="passwd-reset-confirm" placeholder="Confirm Password" onfocus="onFocusInput('passwd-reset-confirm-border')" onblur="onBlurInput('passwd-reset-confirm-border')">
+                        </label>
+                    </div>
+                    <div class="reset-block-body-input-passwd-confirm-logo-error" id="error-reset-confirm-block">
+                        <div class="reset-block-body-input-passwd-confirm-logo-error-icon">
+                            <i class="fas fa-exclamation"></i>
+                        </div>
+                        <span id="err-reset-message-confirm">Wrong password</span>
+                    </div>
+                    <div class="reset-block-body-input-send">
+                        <button type="submit" id="reset-send" class="reset-block-body-input-send-button" disabled>Create Account</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

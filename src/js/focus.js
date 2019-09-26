@@ -14,12 +14,11 @@ window.onload = function() {
 
     let emailSignUp = document.getElementById('email-signup');
     let passwdSignUp = document.getElementById('passwd-signup');
-    console.log(passwdSignUp);
     let passwdSignUpConfirm = document.getElementById('passwd-signup-confirm');
 
-    let errMesPasswd = document.getElementById('err-message');
+    let errMesPasswd = document.getElementById('err-signup-message');
     let errMesPasswdBlock = document.getElementById('error-signup-block');
-    let errMesPasswdConfirm =document.getElementById('err-message-confirm');
+    let errMesPasswdConfirm = document.getElementById('err-signup-message-confirm');
     let errMesPasswdConfirmBlock = document.getElementById('error-signup-confirm-block');
 
     let createButton = document.getElementById("signup-send");
@@ -117,12 +116,13 @@ window.onload = function() {
     }
 
     passwdSignUp.onkeyup = () => {
+        errMesPasswdBlock.style.display = "none";
         validPasswdSignUp = testPasswd(passwdSignUp, errMesPasswd, errMesPasswdBlock);
         signUpValid();
     }
 
     passwdSignUpConfirm.onkeyup = () => {
-        let pass = paswdSignUp.value;
+        let pass = passwdSignUp.value;
         let passConfirm = passwdSignUpConfirm.value;
 
         if(pass === passConfirm) {
@@ -135,6 +135,8 @@ window.onload = function() {
     }
 
     function animation(elem, block, message) {
+        console.log(message);
+        console.log(elem);
         elem.innerHTML = message;
         fadeIn(block);
         setTimeout(() => {
